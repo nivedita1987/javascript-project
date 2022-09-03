@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+        function backg()
+        {
+            return Math.floor(Math.random()*900).toString(16);
+        }
+        function f()
+        {
+    //document.getElementById('d').style.background="red";
+   
+document.getElementById('d').style.backgroundColor='rgb('+ backg() +','+ backg() +','+ backg() +')';      
+}
+    </script>
+    <div id="d" style="position: absolute;width:50%;background-color: blanchedalmond;height:50%; margin-left: 200px;margin-top: 100px;"><input style="margin: 150px;" type="button" value="click" onclick="f()" ></div>
+
+</body>
+  </html>
