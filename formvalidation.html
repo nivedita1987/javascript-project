@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            
+        function validation()
+        {
+            var u=document.f.u.value;
+            var p=document.f.p.value;
+            if(u=="")
+          document.getElementById('ui').innerHTML="<font color=red>please enter user name</font>";
+          if(p=="")
+          document.getElementById('pi').innerHTML="<font color=red>please enter password</font>";
+            if(p!="" && u!="")
+           {
+            if(u!="nivedita" )
+            {
+                document.getElementById('summary').innerHTML="<font color=red>Invalide user name</font>";
+            }
+            else if(p!="coder")
+            {
+                document.getElementById('summary').innerHTML="<font color=red>Invalide password</font>";
+            }
+            document.getElementById('summary').innerHTML="<h1>Welcome to<font color=red>"+u+"</font></h1>";
+            
+
+        }
+           /* document.getElementById('summary').innerHTML="Invalid username";
+           else if(p!="coder")
+           document.getElementById('summary').innerHTML="Invalid password";
+           else 
+           document.getElementById('summary').innerHTML="Welcome to"+u;*/
+
+        }
+        function em()
+        {
+            var u=document.f.u.value;
+          if(u=="")
+          document.getElementById('ui').innerHTML="<font color=red>please enter user name</font>";
+
+        }
+        function emp()
+        {
+            var p=document.f.p.value;
+          if(p=="")
+          document.getElementById('pi').innerHTML="<font color=red>please enter password</font>";
+          }
+
+</script>
+</head>
+<body>
+    <h3>
+        Resistration Form
+    </h3>
+
+    <FORM NAME="f">
+        <table>
+<tr><td>ENTER USER NAME</td><td><INPUT TYPE="TEXT" NAME="u" onblur="em()" onfocus="document.getElementById('ui').innerHTML='';"></td><td id="ui"></td></tr>
+    <tr><td>ENTER PASSWORD</td><td><INPUT TYPE="TEXT" NAME="p" onblur="emp()" onfocus="document.getElementById('pi').innerHTML='';"></td><td id="pi"></td></tr>
+     <tr><td></td><td><INPUT TYPE="button" VALUE="CLICK" onclick="validation()"></td></tr> 
+       <tr><td id="summary"></td><td></td><td></td></tr>    
+    </table>
+            </FORM>
+</body>
+</html>
