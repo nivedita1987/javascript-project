@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function color()
+{
+var c=    "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+//document.getElementById('d').style.backgroundColor="rgb("+Math.random()*+")";
+document.getElementById('d').style.backgroundColor=c;
+function rgb2hex(c){
+ var rgb = c.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+ return "#" +
+  ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+  ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+  ("0" + parseInt(rgb[3],10).toString(16)).slice(-2);
+}
+var r=rgb2hex(c);
+document.getElementById('p').innerHTML=r;
+
+}
+
+    </script>
+    <div id="d" style="position:absolute;width:700px;height:500px;background-color: bisque;"><button style="margin: 100px;"onclick="color()">click</button><p style="position:absolute;margin: 140px;background-color: rgb(249, 237, 8);padding: 30px;" id="p">color</p></div>
+</body>
+</html>
