@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+.area{
+position: absolute;
+width:70%;
+height:70%;
+margin:100px;
+background-color: rgb(162, 237, 239);
+padding: 50px;
+text-align: center;
+}
+.but{
+    
+position: absolute;
+margin:100px;
+    width:70%;
+    height: 20%;
+   
+}
+.but button{
+   width:150px;
+   margin-left: 10px;
+}
+#c{
+    font-size: 100px;
+    color:blue;
+}
+    </style>
+    <script>
+         let a=0;
+        function inc()
+        {
+           
+           a=a+1;
+document.getElementById('c').innerHTML=a;
+        }
+        function res()
+        {
+            a=0;
+            document.getElementById('c').innerHTML=a;
+        }
+        function dec()
+        {
+            if(a>0)
+            a=a-1;
+document.getElementById('c').innerHTML=a;
+        }
+    </script>
+</head>
+<body>
+    <div class="area">
+        <h1>Counter</h1>
+        <div id="c">1</div>
+        <div class="but">
+        <button class="btn btn-outline-primary rounded-2" onclick="dec()">Decrease</button>
+        <button class="btn btn-outline-primary rounded-2" onclick="res()">Reset</button>
+        <button class="btn btn-outline-primary rounded-2" onclick="inc()">Increase</button>
+    </div>
+    </div>
+</body>
+</html>
